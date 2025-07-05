@@ -1,5 +1,5 @@
 {
-  "name": "gifted-auth",
+  "name": "prince-auth",
   "version": "1.0.0",
   "description": "Backend Email Service for Gifted Auth",
   "main": "./index.js",
