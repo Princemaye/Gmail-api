@@ -2,103 +2,33 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <title>Password Reset Request</title>
   <style>
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      background-color: #f9f9f9; 
-      color: #333; 
-      margin: 0; 
-      padding: 0;
-    }
-    .container {
-      max-width: 600px; 
-      margin: 40px auto; 
-      background: #fff; 
-      border-radius: 8px; 
-      overflow: hidden; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .header { 
-      background-color: #0066cc; 
-      padding: 25px; 
-      text-align: center; 
-    }
-    .header h1 { 
-      color: white; 
-      margin: 0; 
-      font-size: 24px;
-    }
-    .content { 
-      padding: 30px; 
-    }
-    .content p { 
-      font-size: 16px; 
-      margin: 15px 0; 
-    }
-    .code-container {
-      text-align: center;
-      margin: 35px 0;
-    }
-    .code {
-      display: inline-block;
-      background: #f4f6f8;
-      padding: 15px 25px;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 6px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      color: #0066cc;
-      font-family: monospace;
-    }
-    .warning {
-      background-color: #fff4f4;
-      color: #c62828;
-      border-left: 4px solid #c62828;
-      padding: 15px;
-      margin-top: 25px;
-      border-radius: 4px;
-    }
-    .expiry-note {
-      font-style: italic;
-      font-size: 14px;
-      color: #555;
-      margin-top: 20px;
-    }
-    .security-tip {
-      background-color: #e8f4fd;
-      border-left: 4px solid #1976d2;
-      padding: 15px;
-      margin-top: 25px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .footer {
-      text-align: center; 
-      font-size: 13px; 
-      color: #777; 
-      padding: 20px; 
-      background-color: #f0f0f0;
-    }
-    .footer a {
-      color: #0066cc; 
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .header { background-color: #0066cc; padding: 25px; text-align: center; }
+    .header h1 { color: white; margin: 0; font-size: 24px; }
+    .content { padding: 30px; }
+    .content p { font-size: 16px; margin: 15px 0; }
+    .code-container { text-align: center; margin: 35px 0; }
+    .code { display: inline-block; background: #f4f6f8; padding: 15px 25px; font-size: 24px; font-weight: bold; letter-spacing: 6px; border-radius: 8px; border: 1px solid #ccc; color: #0066cc; font-family: monospace; }
+    .warning { background-color: #fff4f4; color: #c62828; border-left: 4px solid #c62828; padding: 15px; margin-top: 25px; border-radius: 4px; font-size: 14px; }
+    .expiry-note { font-style: italic; font-size: 14px; color: #555; margin-top: 20px; }
+    .security-tip { background-color: #e8f4fd; border-left: 4px solid #1976d2; padding: 15px; margin-top: 25px; border-radius: 4px; font-size: 14px; }
+    .footer { text-align: center; font-size: 13px; color: #777; padding: 20px; background-color: #f0f0f0; }
+    .footer a { color: #0066cc; text-decoration: none; font-weight: bold; }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>Password Reset for Your Princetechn Account</h1>
+      <h1>Password reset request</h1>
     </div>
     <div class="content">
       <p>Hi <strong>{{username}}</strong>,</p>
 
-      <p>We received a request to reset your password for your Princetechn account. Please use the verification code below to complete the process:</p>
+      <p>We received a request to reset your Princetechn account password. Please use the verification code below to complete the process:</p>
 
       <div class="code-container">
         <div class="code">{{code}}</div>
@@ -106,18 +36,17 @@
 
       <p class="expiry-note">This code will expire in 10 minutes.</p>
 
-      <div class="warning">
+      <div class="warning" alt="Warning">
         ⚠️ If you did not request this reset, please ignore this email or secure your account immediately.
       </div>
 
       <div class="security-tip">
-        <strong>Security Tip:</strong> Never share your verification code with anyone, including Princetechn staff.
+        <strong>Security tip:</strong> Never share your verification code with anyone, including Princetechn staff.
       </div>
     </div>
     <div class="footer">
-      &copy; {{year}} <a href="https://princetechn.com" target="_blank">Princetechn</a>. All rights reserved.
-      <br>
-      <a href="https://princetechn.com" target="_blank">Visit our website</a>
+      &copy; {{year}} <a href="https://princetechn.com" target="_blank">Princetechn</a>. All rights reserved.<br>
+      BAMENDA CAMEROON| <a href="mailto:support@princetechn.com">Contact support</a>
     </div>
   </div>
 </body>
