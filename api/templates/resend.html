@@ -2,138 +2,51 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <title>Your Verification Code</title>
   <style>
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      background-color: #f9f9f9; 
-      color: #333; 
-      margin: 0; 
-      padding: 0;
-    }
-    .container {
-      max-width: 600px; 
-      margin: 40px auto; 
-      background: #fff; 
-      border-radius: 8px; 
-      overflow: hidden; 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .header { 
-      background-color: #00b894; 
-      padding: 25px; 
-      text-align: center; 
-    }
-    .header h1 { 
-      color: white; 
-      margin: 0; 
-      font-size: 24px;
-    }
-    .content { 
-      padding: 30px; 
-    }
-    .content p { 
-      font-size: 16px; 
-      margin: 15px 0; 
-    }
-    .username {
-      font-weight: bold;
-      color: #d63031;
-    }
-    .code-container {
-      text-align: center;
-      margin: 35px 0;
-    }
-    .code {
-      display: inline-block;
-      background: #f4f6f8;
-      padding: 15px 25px;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 6px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      color: #00b894;
-      font-family: monospace;
-    }
-    .expiry-note {
-      font-style: italic;
-      font-size: 14px;
-      color: #555;
-      margin-top: 20px;
-    }
-    .security-tip {
-      background-color: #e8f4fd;
-      border-left: 4px solid #2196f3;
-      padding: 15px;
-      margin-top: 25px;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    .footer {
-      text-align: center; 
-      font-size: 13px; 
-      color: #777; 
-      padding: 20px; 
-      background-color: #f0f0f0;
-    }
-    .footer a {
-      color: #00b894; 
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    .social-icons {
-      margin-top: 20px;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin: 0 8px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background-color: #55efc4;
-      color: white;
-      text-align: center;
-      line-height: 36px;
-      font-size: 18px;
-      transition: all 0.3s ease;
-    }
-    .social-icons a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 0; }
+    .container { max-width: 600px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .header { background-color: #00b894; padding: 25px; text-align: center; }
+    .header h1 { color: white; margin: 0; font-size: 24px; }
+    .content { padding: 30px; }
+    .content p { font-size: 16px; margin: 15px 0; }
+    .username { font-weight: bold; color: #d63031; }
+    .code-container { text-align: center; margin: 35px 0; }
+    .code { display: inline-block; background: #f4f6f8; padding: 15px 25px; font-size: 24px; font-weight: bold; letter-spacing: 6px; border-radius: 8px; border: 1px solid #ccc; color: #00b894; font-family: monospace; }
+    .expiry-note { font-style: italic; font-size: 14px; color: #555; margin-top: 20px; }
+    .security-tip { background-color: #e8f4fd; border-left: 4px solid #2196f3; padding: 15px; margin-top: 25px; border-radius: 4px; font-size: 14px; }
+    .footer { text-align: center; font-size: 13px; color: #777; padding: 20px; background-color: #f0f0f0; }
+    .footer a { color: #00b894; text-decoration: none; font-weight: bold; }
+    .footer a:hover { text-decoration: underline; }
+    .social-icons { margin-top: 20px; }
+    .social-icons a { display: inline-block; margin: 0 8px; width: 36px; height: 36px; border-radius: 50%; background-color: #55efc4; color: white; text-align: center; line-height: 36px; font-size: 18px; transition: all 0.3s ease; text-decoration: none; }
+    .social-icons a:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>Your Verification Code</h1>
+      <h1>Your verification code</h1>
     </div>
     <div class="content">
       <p>Hello <span class="username">{{username}}</span>,</p>
-
-      <p>We received a request to send you a new verification code for your Princetechn account. Please use the code below:</p>
-
+      <p>Here is the verification code you requested for your Princetechn account:</p>
       <div class="code-container">
         <div class="code">{{code}}</div>
       </div>
-
       <p class="expiry-note">This code will expire in 10 minutes.</p>
-
       <div class="security-tip">
-        <strong>Security Tip:</strong> Never share your verification code with anyone, including Princetechn support staff.
+        <strong>Security tip:</strong> Never share your verification code with anyone, including Princetechn support staff.
       </div>
     </div>
     <div class="footer">
-      &copy; {{year}} <a href="https://princetechn.com" target="_blank">Princetechn</a>. All rights reserved.
-      
+      &copy; {{year}} <a href="https://princetechn.com" target="_blank">Princetechn</a>. All rights reserved.<br>
+      <span>BAMENDA CAMEROON | <a href="mailto:support@princetechn.com">Contact support</a></span>
       <div class="social-icons">
-        <a href="https://whatsapp.com/channel/0029Vakd0RY35fLr1MUiwO3O" title="WhatsApp">📱</a>
-        <a href="https://x.com/" title="Twitter">𝕏</a>
-        <a href="https://www.facebook.com/" title="Facebook">f</a>
-        <a href="https://tiktok.com/" title="TikTok">♬</a>
+        <a href="https://whatsapp.com/channel/0029Vakd0RY35fLr1MUiwO3O" title="WhatsApp" alt="WhatsApp">📱</a>
+        <a href="https://x.com/" title="Twitter" alt="Twitter">𝕏</a>
+        <a href="https://www.facebook.com/" title="Facebook" alt="Facebook">f</a>
+        <a href="https://tiktok.com/" title="TikTok" alt="TikTok">♬</a>
       </div>
     </div>
   </div>
