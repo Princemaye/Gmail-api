@@ -198,11 +198,22 @@ const fs = require('fs');
 const path = require('path');
 const config = require('../config');
 const nodemailer = require('nodemailer');
-
+/*
 const transporter = nodemailer.createTransport({
   host: config.emailHost,
   port: config.emailPort,
   secure: true,
+  auth: {
+    user: config.emailUser,
+    pass: config.emailPass,
+  },
+});
+*/
+
+const transporter = nodemailer.createTransport({
+  host: config.emailHost,
+  port: config.emailPort,
+  secure: config.emailPort === '465', // true for SSL, false for TLS
   auth: {
     user: config.emailUser,
     pass: config.emailPass,
@@ -408,3 +419,4 @@ module.exports = {
   sendDeleteCode,
   isValidEmail
 };
+
